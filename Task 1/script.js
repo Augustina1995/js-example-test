@@ -7,3 +7,5 @@
 // Pastaba: Rezultatai turi būti matomi formoje su įvesties lauku ir mygtuku,
 // ir rezultatai turi būti rodomi viduje <div id="output"></div> elemente.
 // Užtikrinkite, kad naudotojo sąsaja turėtų bent minimalų stilių.
+
+console.log(8);
