@@ -8,4 +8,28 @@
 // ir rezultatai turi būti rodomi viduje <div id="output"></div> elemente.
 // Užtikrinkite, kad naudotojo sąsaja turėtų bent minimalų stilių.
 
-console.log(8);
+// ANSWER
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    // Get the input value (temperature in Celsius)
+    const celsiusInput = parseFloat(document.getElementById("search").value);
+
+    // Convert Celsius to Fahrenheit
+    const fahrenheit = (celsiusInput * 9) / 5 + 32;
+
+    // Convert Celsius to Kelvin
+    const kelvin = celsiusInput + 273.15;
+
+    // Create a string with the conversion results
+    const resultString = `Temperature in Fahrenheit: ${fahrenheit.toFixed(2)}°F <br> Temperature in Kelvin: ${kelvin.toFixed(2)}K`;
+
+    // Display the results in the output div
+    const outputDiv = document.getElementById("output");
+    outputDiv.style.display = "block"; // Show the output div
+    outputDiv.innerHTML = resultString;
+  });
+});

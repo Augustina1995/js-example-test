@@ -19,3 +19,21 @@ const students = [
   { id: "8", name: "Henry Wilson", averageGrade: 9.5, graduated: true },
   { id: "9", name: "Isabella Martinez", averageGrade: 8.6, graduated: false },
 ];
+
+// ANSWER
+
+// Function to filter top students with average grade higher than 9
+function filterTopStudents(students) {
+  return students.filter(student => student.averageGrade > 9);
+}
+
+// Function to filter graduated students
+function filterGraduated(students) {
+  return students.filter(student => student.graduated);
+}
+
+const topStudents = filterTopStudents(students);
+console.log("Top students:", topStudents);
+
+const graduatedStudents = filterGraduated(students);
+console.log("Graduated students:", graduatedStudents);
